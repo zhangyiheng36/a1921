@@ -1,14 +1,7 @@
+#include"yuesefu.h"
 #include<stdio.h>
 #include<malloc.h>
 #include<stdlib.h>
-
-#define n 11
-#define m 3  
-typedef int dataType;
-typedef struct node{
-	dataType data;
-	struct node *next;
-}LinkList,node;
 
 LinkList* CreateList(){
 	LinkList *head;
@@ -96,20 +89,8 @@ void ClearList(LinkList *l){
 	}
 	l->next=NULL;
 }
-
-int main(int argc,char **arg){
-	LinkList *list=CreateList();
-	Insert(list,1,10);
-	Insert(list,1,20);
-	Delete(list,2);
-	Insert(list,1,30);
-	Insert(list,1,40);
-	printf("链表的元素个数为: %d\n",Size(list));
-	Print(list);
-	printf("链表的第二个元素为: %d\n",GetData(list,2));	
-
-	printf("\n");
-
+     
+void Yuesefu(){
 	int k=0;
 	node *p,*q,*r;
 	p=q=(node*)malloc(sizeof(node));
@@ -140,3 +121,4 @@ int main(int argc,char **arg){
 
 	return 0;}
  
+# zhangyiheng36a1921 yuesefu.h testyuesefu.c Makefile
